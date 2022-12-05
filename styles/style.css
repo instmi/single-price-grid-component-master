@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(206deg, 47%, 93%);
+  color: hsl(218deg, 22%, 67%);
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+}
+
+#card {
+  border-radius: 0.25rem;
+  box-shadow: 0 0.625rem 0.9375rem 0.75rem hsla(0deg, 0%, 0%, 0.03);
+  margin: 4.5rem 0;
+  overflow: hidden;
+  width: 83vw;
+}
+@media screen and (min-width: 48rem) {
+  #card {
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "join join" "subscription why-us";
+  }
+}
+@media screen and (min-width: 48rem) and (min-width: 56.25rem) {
+  #card {
+    max-width: 54vw;
+  }
+}
+@media screen and (min-width: 48rem) and (min-width: 56.25rem) and (min-width: 1300px) {
+  #card {
+    max-width: 44vw;
+  }
+}
+#card div {
+  padding: 1.5625rem;
+}
+@media screen and (min-width: 48rem) {
+  #card div {
+    padding: 2.4375rem;
+  }
+}
+#card div h1 {
+  color: hsl(179deg, 61%, 44%);
+  font-size: 20px;
+}
+@media screen and (min-width: 48rem) {
+  #card div h1 {
+    font-size: 1.5rem;
+  }
+}
+#card div h2 {
+  color: hsla(0deg, 0%, 100%, 0.8);
+  font-size: 1.125rem;
+}
+#card div:first-child {
+  background-color: rgb(255, 255, 255);
+  grid-area: join;
+}
+#card div:first-child h1 + p {
+  color: hsl(71deg, 73%, 54%);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1.2rem;
+  margin: 1.5rem 0 1rem 0;
+}
+@media screen and (min-width: 48rem) {
+  #card div:first-child h1 + p {
+    font-size: 1.0625rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.6rem;
+  }
+}
+#card div:first-child p {
+  font-size: 0.875rem;
+  line-height: 1.65rem;
+}
+@media screen and (min-width: 48rem) {
+  #card div:first-child p {
+    font-size: 1rem;
+  }
+}
+#card div:nth-child(2) {
+  background-color: hsl(179deg, 61%, 44%);
+  color: rgba(255, 255, 255, 0.8);
+  grid-area: subscription;
+}
+#card div:nth-child(2) div {
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  margin: 1rem 0 0.5rem 0;
+  padding: 0;
+}
+#card div:nth-child(2) div span:first-child {
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-right: 0.875rem;
+}
+#card div:nth-child(2) button {
+  background-color: hsl(71deg, 73%, 54%);
+  border: 0.0625rem solid hsl(71deg, 73%, 54%);
+  box-shadow: 0.0625rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.3125rem;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  padding: 14px 18px;
+  margin-top: 2rem;
+  width: 100%;
+}
+#card div:nth-child(2) button:hover {
+  cursor: pointer;
+}
+#card div:last-child {
+  background-color: hsl(179deg, 47%, 52%);
+  color: rgb(255, 255, 255);
+  grid-area: why-us;
+}
+#card div:last-child ul {
+  font-size: 14px;
+  list-style-type: none;
+  margin-top: 1rem;
+}
+#card div:last-child ul li {
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.25rem;
+}/*# sourceMappingURL=style.css.map */

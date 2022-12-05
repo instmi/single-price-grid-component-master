@@ -1,0 +1,130 @@
+@import '../abstract/variables';
+
+#card {
+   border-radius: 0.25rem;
+   box-shadow: 0 0.625rem 0.9375rem 0.75rem hsl(0deg 0% 0% / 3%);
+   margin: 4.5rem 0;
+   overflow: hidden;
+   width: 83vw;
+
+   @media screen and (min-width: 48rem) {
+      border-radius: 0.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 
+      "join join"
+      "subscription why-us";
+      
+      @media screen and (min-width: 56.25rem) {
+         max-width: 54vw;
+
+         @media screen and (min-width: 1300px) {
+            max-width: 44vw;
+         }
+      }
+   }
+
+   div {
+      padding: 1.5625rem;
+
+      @media screen and (min-width: 48rem) {
+         padding: 2.4375rem;
+      }
+
+      h1 {
+         color: $second-bg-color;
+         font-size: $heading-size;
+
+         @media screen and (min-width: 48rem) {
+            font-size: 1.5rem;
+         }
+      }
+
+      h2 {
+         color: hsla(0, 0%, 100%, 0.800);
+         font-size: 1.125rem;
+      }
+   }
+
+   div:first-child {
+      background-color: $first-bg-color;
+      grid-area: join;
+
+      h1 + p {
+         color: $button-color;
+         font-size: 0.9375rem;
+         font-weight: $font-bold;
+         line-height: 1.2rem;
+         margin: 1.5rem 0 1rem 0;
+
+         @media screen and (min-width: 48rem) {
+            font-size: 1.0625rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.6rem;
+         }
+      }
+
+      p {
+         font-size: 0.875rem;
+         line-height: 1.65rem;
+
+         @media screen and (min-width: 48rem) {
+            font-size: 1rem;
+         }
+      }
+   }
+
+   div:nth-child(2) {
+      background-color: $second-bg-color;
+      color: rgba(255, 255, 255, 0.800);;
+      grid-area: subscription;
+
+      div {
+         align-items: center;
+         color: rgba(255, 255, 255, 0.500);
+         display: flex;
+         margin: 1rem 0 0.5rem 0;
+         padding: 0;
+
+         span:first-child {
+            color: $first-bg-color;
+            font-size: 2rem;
+            font-weight: $font-bold;
+            margin-right: 0.875rem;
+         }
+      }
+
+      button {
+         background-color: $button-color;
+         border: 0.0625rem solid $button-color;
+         box-shadow: 0.0625rem 0.125rem 0.3125rem rgb(0 0 0 / 15%);
+         border-radius: 0.3125rem;
+         color: $first-bg-color;
+         font-weight: $font-bold;
+         padding: 14px 18px;
+         margin-top: 2rem;
+         width: 100%;
+
+         &:hover {
+            cursor: pointer;
+         }
+      }
+   }
+
+   div:last-child {
+      background-color: $last-bg-color;
+      color: $first-bg-color;
+      grid-area: why-us;
+
+      ul {
+         font-size: 14px;
+         list-style-type: none;
+         margin-top: 1rem;
+
+         li {
+            color: rgba(255, 255, 255, 0.500);
+            line-height: 1.25rem;
+         }
+      }
+   }
+}
